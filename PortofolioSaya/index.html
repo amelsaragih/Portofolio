@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio - Sistem Informasi</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  :root {
+    --pink: #e91e63;
+    --black: #121212;
+    --dark-grey: #222;
+    --light-pink: #f8bbd0;
+    --font-primary: 'Poppins', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--black);
+    color: var(--light-pink);
+    font-family: var(--font-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 900px;
+    width: 100%;
+    border: 2px solid var(--pink);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2b0a24 100%);
+    box-shadow: 0 0 15px var(--pink);
+  }
+
+  /* Profile Section */
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid var(--pink);
+    object-fit: cover;
+    box-shadow: 0 0 8px var(--pink);
+  }
+
+  .profile-name {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--pink);
+    text-shadow: 0 0 5px var(--pink);
+  }
+
+  /* Description Section */
+  .description-container {
+    margin-top: 30px;
+    overflow: hidden;
+    border: 2px solid var(--pink);
+    border-radius: 15px;
+    height: 80px;
+    background-color: var(--dark-grey);
+    position: relative;
+  }
+
+  .description-text {
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+    animation: slideLeft 20s linear infinite;
+    font-size: 1.1rem;
+    padding: 15px 10px;
+    color: var(--light-pink);
+  }
+
+  @keyframes slideLeft {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  /* Skills Section */
+  .skills {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .skill-item {
+    background-color: var(--pink);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--black);
+    box-shadow: 0 0 10px var(--pink);
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  .skill-item:hover {
+    transform: scale(1.1);
+  }
+
+  /* Contact Section */
+  .contact {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--pink);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  .contact-item:hover {
+    transform: scale(1.2);
+  }
+
+  .contact-name {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--light-pink);
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    fill: var(--pink);
+    filter: drop-shadow(0 0 4px var(--pink));
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+    .profile-name {
+      font-size: 1.6rem;
+    }
+    .description-container {
+      height: 70px;
+    }
+    .description-text {
+      font-size: 1rem;
+    }
+    .skills {
+      gap: 10px;
+    }
+    .skill-item {
+      font-size: 0.9rem;
+      padding: 8px 14px;
+    }
+    .contact {
+      gap: 30px;
+    }
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main">
+    <section class="profile" aria-label="Profil Diri">
+      <img src="img/poto profil.png" alt="Foto Profil" class="profile-photo" />
+      <h1 class="profile-name">Amelia Putri Saragih</h1>
+    </section>
+
+    <section class="description-container" aria-label="Deskripsi Diri">
+      <p class="description-text">
+        Mahasiswa Jurusan Sistem Informasi | Bersemangat dalam pengembangan solusi IT inovatif dan analisis data | Terampil dalam pemrograman, manajemen basis data, dan desain sistem | Mencari peluang untuk belajar dan berkembang di industri teknologi informasi
+      </p>
+    </section>
+
+    <section class="skills" aria-label="Keahlian">
+      <div class="skill-item">Jaringan Komputer</div>
+      <div class="skill-item">Manajemen Database</div>
+      <div class="skill-item">Pemrograman Java</div>
+      <div class="skill-item">Pengolahan Data</div>
+      <div class="skill-item">UI/UX Design</div>
+
+    </section>
+
+    <section class="contact" aria-label="Kontak">
+      <a href="https://www.instagram.com/amelsaragihe/" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="Instagram Dewi Kartika">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5a3.75 3.75 0 01-3.75 3.75h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm4.25 2a4.25 4.25 0 100 8.5 4.25 4.25 0 000-8.5zm0 2a2.25 2.25 0 110 4.5 2.25 2.25 0 010-4.5zm5.5-.75a1 1 0 110 2 1 1 0 010-2z"/>
+        </svg>
+        <span class="contact-name">amelsaragihe</span>
+      </a>
+      <a href="https://linkedin.com/in/amelsaragihe" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Dewi Kartika">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 8h4v12H3V8zm7 0h3.6v1.7h.05c.5-.9 1.72-1.85 3.56-1.85 3.8 0 4.5 2.5 4.5 5.75V20h-4v-6.3c0-1.5-.05-3.4-2.1-3.4-2.1 0-2.42 1.64-2.42 3.33V20h-4V8z"/>
+        </svg>
+        <span class="contact-name">amelsaragihe</span>
+      </a>
+      <a href="mailto:dewikartika@example.com" class="contact-item" aria-label="amelsaragihe@gmail.com">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+        </svg>
+        <span class="contact-name">amelsaragihe@gmail.com</span>
+      </a>
+    </section>
+  </div>
+</body>
+</html>
+
